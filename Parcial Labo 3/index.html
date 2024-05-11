@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Modelo de Parcial</title>
+
+        <link rel="stylesheet" href="style.css" />
+        <link rel="icon" type="image/x-icon" href="./img/icons/exam.png" />
+    </head>
+    <body>
+        <div id="content-border">
+            <header>
+                <div id="header-div">
+                    <h1 id="title">Formulario de Datos</h1>
+                    <h3 id="subtitle">Modelo de Parcial</h3>
+                </div>
+            </header>
+
+            <main id="main">
+                <div class="main-content">
+                    <div id="form-data">
+                        <div id="dropbox">
+                            <label for="filter">Filtrar por: </label>
+                            <select name="filter" id="filter">
+                                <option value="Todos">Todos</option>
+                                <option value="Ciudadanos">Ciudadanos</option>
+                                <option value="Extranjeros">Extranjeros</option>
+                            </select>
+                        </div>
+
+                        <div id="media">
+                            <label for="media-output">Calcular el promedio de edad: </label>
+                            <input id="media-output" type="text" readonly />
+                            <button id="btn-media">Calcular Promedio</button>
+                        </div>
+
+                        <div id="show-table-columns">
+                            <label>Mostrar campos de la tabla: </label>
+
+                            <div id="show-table-elements">
+                                <label for="checkbox-id">ID</label>
+                                <input type="checkbox" name="ID" id="checkbox-id" checked />
+
+                                <label for="checkbox-name">Nombre</label>
+                                <input type="checkbox" name="Nombre" id="checkbox-name" checked />
+
+                                <label for="checkbox-surname">Apellido</label>
+                                <input type="checkbox" name="Apellido" id="checkbox-surname" checked />
+
+                                <label for="checkbox-date">Fecha de Nacimiento</label>
+                                <input type="checkbox" name="Fecha de Nacimiento" id="checkbox-date" checked />
+
+                                <label for="checkbox-dni">DNI</label>
+                                <input type="checkbox" name="DNI" id="checkbox-dni" checked />
+
+                                <label for="checkbox-country">Pais de Origen</label>
+                                <input type="checkbox" name="Pais de Origen" id="checkbox-country" checked />
+                            </div>
+                        </div>
+
+                        <div id="table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nombre</th>
+                                        <th>Apellido</th>
+                                        <th>Fecha de Nacimiento</th>
+                                        <th>DNI</th>
+                                        <th>Pais de Origen</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="table-content"></tbody>
+                            </table>
+                            <button id="btn-table">Agregar</button>
+                        </div>
+                    </div>
+
+                    <div id="abm-form" class="hidden">
+                        <h2 id="abm-form-title">Formulario ABM</h2>
+
+                        <div id="abm-form-elements">
+                            <label for="abm-form-id">ID</label>
+                            <input type="number" id="abm-form-id" readonly />
+
+                            <label for="abm-form-name">Nombre</label>
+                            <input type="text" id="abm-form-name" />
+
+                            <label for="abm-form-surname">Apellido</label>
+                            <input type="text" id="abm-form-surname" />
+
+                            <label for="abm-form-date">Fecha de Nacimiento</label>
+                            <input type="number" id="abm-form-date" />
+
+                            <label for="abm-form-type">Tipo</label>
+                            <select id="abm-form-type">
+                                <option value="Ciudadano">Ciudadano</option>
+                                <option value="Extranjero">Extranjero</option>
+                            </select>
+
+                            <label for="abm-form-dni" id="abm-form-lbl-dni">DNI</label>
+                            <input type="number" id="abm-form-dni" />
+
+                            <label for="abm-form-country" id="abm-form-lbl-country">Pais de Origen</label>
+                            <input type="text" id="abm-form-country" />
+
+                            <button id="abm-form-accept">Aceptar</button>
+                            <button id="abm-form-delete">Eliminar</button>
+                            <button id="abm-form-modify">Modificar</button>
+                            <button id="abm-form-cancel">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script type="module" src="clases/persona.js"></script>
+        <script type="module" src="clases/ciudadano.js"></script>
+        <script type="module" src="clases/extranjero.js"></script>
+
+        <script type="module" src="functions.js"></script>
+
+        <script type="module" src="main.js"></script>
+    </body>
+</html>
